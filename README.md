@@ -12,33 +12,32 @@
 
 ### Program:
 ```
-CREATE TABLE ep1(
-       empid NUMBER,
-       empname VARCHAR(10),
-       dept VARCHAR(10),
-       salary NUMBER
-       );
-       CREATE OR REPLACE PROCEDURE emp_data AS
-       BEGIN
-       INSERT INTO ep1(empid,empname,dept,salary)
-       values(1,'Swetha','MD',10000000);
-       INSERT INTO ep1(empid,empname,dept,salary)
-       values(2,'Anitha','HR',500000);
-       INSERT INTO ep1(empid,empname,dept,salary)
-       values(3,'Divya','IT',200000);
-       COMMIT;
-       FOR emp_rec IN (SELECT * FROM ep1)LOOP
-       DBMS_OUTPUT.PUT_LINE('EMPLOYEE ID:'||emp_rec.empid||',EMPLOYEE NAME:'|| emp_rec.empname||
-       ',DEPARTMENT:'||emp_rec.dept||',SALARY:'||emp_rec.salary);
-       END LOOP;
-       END;
-       /
+ CREATE TABLE emp12(empid NUMBER,
+  2  empname VARCHAR(10),
+  3   dept VARCHAR(10),
+  4  salary NUMBER);
+
+CREATE OR REPLACE PROCEDURE insert_employee AS
+  2  BEGIN
+  3  INSERT INTO emp12(empid, empname, dept, salary)
+  4  VALUES (1,'Priya','HR',50000);
+  5  INSERT INTO emp12(empid, empname, dept, salary)
+  6  VALUES (2,'swetha','IT',60000);
+  7  INSERT INTO emp12(empid, empname, dept, salary)
+  8  VALUES (3,'thanika','Finance',55000);
+  9  COMMIT;
+ 10  end;
+ 11  /
+
+
+
+       
 ```
 
 
 ### Output:
-![Screenshot 2023-10-03 235343](https://github.com/Priyadharshini-Er/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/119558093/5629bd6b-9bf5-4221-b1b1-a20d821fcbbf)
-
+![Screenshot 2023-10-04 110916](https://github.com/Priyadharshini-Er/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/119558093/eae2c2a2-db91-4722-9589-394e5828a7d3)
+![Screenshot 2023-10-04 110928](https://github.com/Priyadharshini-Er/Ex-No-4-Creating-Procedures-using-PL-SQL/assets/119558093/746d2763-f625-4cbe-9d4a-7a6ccbb7d6e1)
 
 ### Result:
 Thus,the output has been successfully verified!
