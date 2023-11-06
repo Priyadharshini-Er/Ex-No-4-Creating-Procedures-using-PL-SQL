@@ -28,10 +28,6 @@ CREATE OR REPLACE PROCEDURE insert_employee AS
   9  COMMIT;
  10  end;
  11  /
-
-
-
-       
 ```
 
 
